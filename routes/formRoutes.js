@@ -2,6 +2,7 @@
 const express = require('express');
 const Pousadas = require('../models/Pousadas');
 const Restaurants = require('../models/Restaurants');
+const GroupHouses = require('../models/GroupHouses');
 const router = express.Router();
 
 // Função para obter o modelo correspondente à categoria
@@ -11,6 +12,8 @@ const getCategoryModel = (categoria) => {
             return Pousadas;
         case 'restaurantes':
             return Restaurants;
+        case 'casasGrupo':
+            return GroupHouses;
         default:
             return null;
     }
