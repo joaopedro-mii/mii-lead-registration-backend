@@ -1,10 +1,10 @@
-// backend/models/Restaurants.js
+// backend/models/Deliverys.js
 const mongoose = require('mongoose');
 
-const RestaurantsSchema = new mongoose.Schema({
+const DeliverysSchema = new mongoose.Schema({
     nome: { type: String, required: true },
     descricao: { type: String, required: true },
-    tipoDeCulinaria: { type: String, required: true },
+    itensCardapio: { type: String, required: true },
     especialidadesDaCasa: { type: String, required: true },
     horarioDeFuncionamento: { type: String, required: true },
     entregas: { type: String, required: true },
@@ -14,4 +14,4 @@ const RestaurantsSchema = new mongoose.Schema({
     link: { type: String, required: true },
 }, { timestamps: true });
 
-module.exports = mongoose.model('Restaurants', RestaurantsSchema);
+module.exports = mongoose.model('Deliverys', DeliverysSchema);

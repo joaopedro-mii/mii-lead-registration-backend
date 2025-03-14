@@ -1,11 +1,12 @@
-// backend/models/Restaurants.js
+// backend/models/Acais.js
 const mongoose = require('mongoose');
 
-const RestaurantsSchema = new mongoose.Schema({
+const AcaisSchema = new mongoose.Schema({
     nome: { type: String, required: true },
     descricao: { type: String, required: true },
-    tipoDeCulinaria: { type: String, required: true },
-    especialidadesDaCasa: { type: String, required: true },
+    itensDoMenu: { type: String, required: true },
+    acompanhamentos: { type: String, required: true },
+    destaquesEstabelecimento: { type: String, required: true },
     horarioDeFuncionamento: { type: String, required: true },
     entregas: { type: String, required: true },
     endereco: { type: String, required: true },
@@ -14,4 +15,4 @@ const RestaurantsSchema = new mongoose.Schema({
     link: { type: String, required: true },
 }, { timestamps: true });
 
-module.exports = mongoose.model('Restaurants', RestaurantsSchema);
+module.exports = mongoose.model('Acais', AcaisSchema);

@@ -3,6 +3,18 @@ const express = require('express');
 const Pousadas = require('../models/Pousadas');
 const Restaurants = require('../models/Restaurants');
 const GroupHouses = require('../models/GroupHouses');
+const Bars = require('../models/Bars');
+const Pizzarias = require('../models/Pizzarias');
+const Espetinhos = require('../models/Espetinhos');
+const Acais = require('../models/Acais');
+const Deliverys = require('../models/Deliverys');
+const EscolasKitesurf = require('../models/EscolasKitesurf');
+const Academias = require('../models/Academias');
+const Arenas = require('../models/Arenas');
+const PersonalTrainer = require('../models/PersonalTrainer');
+const Clinicas = require('../models/Clinicas');
+const Farmacias = require('../models/Farmacias');
+const Massagem = require('../models/Massagem');
 const router = express.Router();
 
 // Função para obter o modelo correspondente à categoria
@@ -14,6 +26,30 @@ const getCategoryModel = (categoria) => {
             return Restaurants;
         case 'casasGrupo':
             return GroupHouses;
+        case 'bares':
+            return Bars;
+        case 'pizzarias':
+            return Pizzarias;
+        case 'espetinhos':
+            return Espetinhos;
+        case 'acais':
+            return Acais;
+        case 'deliverys':
+            return Deliverys;
+        case 'kiteSchools':
+            return EscolasKitesurf;
+        case 'academias':
+            return Academias;
+        case 'arenas':
+            return Arenas;
+        case 'personal':
+            return PersonalTrainer;
+        case 'farmacias':
+            return Farmacias;
+        case 'clinicas':
+            return Clinicas;
+        case 'massagem':
+            return Massagem;
         default:
             return null;
     }
