@@ -1,4 +1,4 @@
-// backend/routes/formularioRoutes.js
+// backend/routes/formRoutes.js
 const express = require('express');
 const Pousadas = require('../models/Pousadas');
 const Restaurants = require('../models/Restaurants');
